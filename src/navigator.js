@@ -1,0 +1,22 @@
+import React, { Component } from 'react';
+import { createStackNavigator } from 'react-navigation';
+import HomeScreen from './home-screen';
+import ShoesScreen from './shoes-screen';
+import TechnologyScreen from './technology-screen';
+import ShoppingCartIcon from './shopping-cart-icon';
+import CartScreen from './cart-screen';
+
+export const AppStackNavigator = createStackNavigator({
+    Home: HomeScreen,
+    Shoes: ShoesScreen,
+    Technology: TechnologyScreen,
+    Cart: CartScreen
+}, {
+    initialRouteName: 'Home',
+    navigationOptions: {
+        headerTitle: 'Mi tienda',
+        headerRight: (
+            <ShoppingCartIcon />
+        )
+    }
+});
