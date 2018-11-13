@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = ( state ) => {
     return {
-        cartItems: this.state.cart
+        cartItems: state.cart
     }
 }
 

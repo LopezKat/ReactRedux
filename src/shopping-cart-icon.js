@@ -1,10 +1,8 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import   Icon  from 'react-native-vector-icons/FontAwesome';
-
-import { withNavigation } from 'react-navigation';
-
 import { connect } from 'react-redux';
+import { withNavigation } from 'react-navigation';
 
 const ShoppingCartIcon = props => (
     <View style={styles.container}>
@@ -40,11 +38,11 @@ const styles = StyleSheet.create({
     }
 });
 
-const mapStateToProps = (state) =>{
+const mapDispatchToProsp = ( state ) => {
     return {
-        cartItems: this.state.cart
+        cartItems: state.cart
     }
 }
 
-export default connect(mapStateToProps)(withNavigation(ShoppingCartIcon));
+export default connect(mapDispatchToProsp, null)(withNavigation(ShoppingCartIcon));
 
